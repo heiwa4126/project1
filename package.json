@@ -1,0 +1,59 @@
+{
+	"name": "project1",
+	"version": "1.0.0",
+	"description": "tsup test",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.js"
+		}
+	},
+	"bin": {
+		"project1": "dist/main.js"
+	},
+	"scripts": {
+		"build": "tsup",
+		"test": "vitest run",
+		"test:run": "vitest run",
+		"test:watch": "vitest --watch",
+		"lint": "biome lint .",
+		"format": "biome format --write .",
+		"format:full": "npm pkg fix && biome format --write . && dprint fmt && textlint --fix \"**/*.md\"",
+		"ex1": "node ./example/ex1.mjs && node ./example/ex1.cjs && tsx ./example/ex1.ts",
+		"smoketest": "npm run ex1"
+	},
+	"keywords": [
+		"hello-world",
+		"example",
+		"demo",
+		"typescript",
+		"esm",
+		"commonjs",
+		"cli",
+		"tsup",
+		"learning",
+		"sigstore",
+		"trusted-publishing",
+		"github-actions"
+	],
+	"author": "heiwa4126 <heiwa4126@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/heiwa4126/project1.git"
+	},
+	"license": "MIT",
+	"packageManager": "pnpm@10.18.3",
+	"devDependencies": {
+		"@types/node": "^24.9.1",
+		"project1": "link:.",
+		"tsup": "^8.5.0",
+		"tsx": "^4.20.6",
+		"typescript": "^5.9.3",
+		"vitest": "^3.2.4"
+	}
+}
