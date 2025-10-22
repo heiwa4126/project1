@@ -7,16 +7,5 @@ describe("index", () => {
 			const result = greet();
 			expect(result).toBe("Hello, world!");
 		});
-
-		it("should return a string", () => {
-			const result = greet();
-			expect(typeof result).toBe("string");
-		});
-
-		it("should not be empty", () => {
-			const result = greet();
-			expect(result).not.toBe("");
-			expect(result.length).toBeGreaterThan(0);
-		});
 	});
 });
