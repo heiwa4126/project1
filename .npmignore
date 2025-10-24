@@ -9,3 +9,4 @@ example/
 pnpm-workspace.yaml
 tsconfig.json
 !*.d.ts
+*.d.cts
