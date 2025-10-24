@@ -28,7 +28,4 @@ export default defineConfig({
 	env: {
 		NODE_ENV: process.env.NODE_ENV || "development",
 	},
-	esbuildOptions(options) {
-		options.resolveExtensions = [".ts", ".js"];
-	},
 });
