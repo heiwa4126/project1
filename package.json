@@ -21,7 +21,7 @@
 		"prepublishOnly": "npm run clean && npm run build && npm run test:run && npm run smoketest",
 		"clean": "rm -rf dist",
 		"build": "tsup",
-		"link": "mkdir -p node_modules && ln -sfn ../dist node_modules/project1",
+		"link": "mkdir -p node_modules && ln -sfn ../ node_modules/project1",
 		"test": "vitest run",
 		"test:run": "vitest run",
 		"test:watch": "vitest --watch",
