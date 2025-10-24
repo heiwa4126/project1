@@ -1,8 +1,11 @@
-*.ts
-!*.d.ts
 .gitattributes
 .github/
-example/
-biome.jsonc
-pnpm-workspace.yaml
+.nvmrc
+.vscode/
 *.tgz
+*.ts
+biome.jsonc
+example/
+pnpm-workspace.yaml
+tsconfig.json
+!*.d.ts

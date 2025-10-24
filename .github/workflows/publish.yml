@@ -17,6 +17,8 @@ jobs:
     # Only run if pushed by repository owner
     if: github.repository_owner == github.actor
     runs-on: ubuntu-latest
+    # この下の environment: の記述でエラーが表示されていたら、
+    # それは VSCode の GitHub Actions 拡張(ID:github.vscode-github-actions)のバグです
     environment: npmjs
     permissions:
       contents: read

@@ -1,6 +1,6 @@
 # project1
 
-TypeScrip でパッケージを書いて
+TypeScript でパッケージを書いて
 EMS と CJS にするプロジェクトのテンプレート。
 
 GitHub から npm への Trusted Publishing のワークフロー付き。

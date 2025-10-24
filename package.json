@@ -1,7 +1,7 @@
 {
 	"name": "project1",
-	"version": "1.0.0",
-	"description": "tsup test",
+	"version": "0.0.0-alpha1",
+	"description": "tsup test template",
 	"type": "module",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",
