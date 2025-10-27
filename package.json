@@ -31,7 +31,7 @@
 		"format:full": "npm pkg fix && biome format --write . && dprint fmt && textlint --fix \"**/*.md\"",
 		"main": "npx project1",
 		"ex1": "node ./example/ex1.mjs && node ./example/ex1.cjs && tsx ./example/ex1.ts",
-		"smoketest": "npm run ex1",
+		"smoketest": "npm run ex1 && node dist/main.js",
 		"security": "trivy fs --skip-dirs node_modules,cdk.out . && trivy config --skip-dirs node_modules,cdk.out .",
 		"audit": "npm audit && trivy fs --scanners vuln package.json"
 	},
