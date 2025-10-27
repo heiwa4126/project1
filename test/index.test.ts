@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { greet } from "../src/index";
+
+// TypeScriptでは `import "./index.js"` と書いても実際にはindex.tsが読まれます。
+// これは TypeScript の仕様です。バグじゃありません
+import { greet } from "../src/index.js";
 
 describe("index", () => {
 	describe("greet", () => {
