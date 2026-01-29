@@ -17,6 +17,7 @@
 		"project1": "dist/main.js"
 	},
 	"scripts": {
+		"preinstall": "npm audit",
 		"init": "npm ci && npm run build && npm run link",
 		"prepublishOnly": "npm run clean && npm run build && npm run test:run && npm run smoketest",
 		"clean": "rm -rf dist",

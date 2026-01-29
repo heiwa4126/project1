@@ -11,3 +11,7 @@ GitHub から npm への Trusted Publishing のワークフロー付き。
 npm run init  # `npm init` ではない
 npm run smoketest
 ```
+
+## TODO
+
+- [ ] tsup から tsdown に変える
