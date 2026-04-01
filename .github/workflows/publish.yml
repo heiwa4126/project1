@@ -20,7 +20,7 @@ jobs:
   osv-scan:
     if: github.repository_owner == github.actor
     ## Only run if pushed by repository owner
-    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@c5996e0193a3df57d695c1b8a1dec2a4c62e8730 # v2.3.3
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@c51854704019a247608d928f370c98740469d4b5 # v2.3.5
     permissions:
       actions: read # reusable workflow の実行に必要
       security-events: write # 脆弱性スキャン結果(SARIF形式)を  GitHub の Security タブにアップロードするために必要
@@ -45,13 +45,13 @@ jobs:
           fetch-depth: 1
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5.0.0
         with:
           version: latest
           run_install: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version: "lts/*"
           cache: pnpm
