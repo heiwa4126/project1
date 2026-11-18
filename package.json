@@ -2,6 +2,29 @@
 	"name": "project1",
 	"version": "0.0.0-alpha1",
 	"description": "tsup test template",
+	"keywords": [
+		"cli",
+		"commonjs",
+		"demo",
+		"esm",
+		"example",
+		"github-actions",
+		"hello-world",
+		"learning",
+		"sigstore",
+		"trusted-publishing",
+		"tsup",
+		"typescript"
+	],
+	"license": "MIT",
+	"author": "heiwa4126 <heiwa4126@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/heiwa4126/project1.git"
+	},
+	"bin": {
+		"project1": "dist/main.js"
+	},
 	"type": "module",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",
@@ -13,9 +36,6 @@
 			"import": "./dist/index.js"
 		}
 	},
-	"bin": {
-		"project1": "dist/main.js"
-	},
 	"scripts": {
 		"preinstall": "npm audit",
 		"init": "npm ci && npm run build && npm run link",
@@ -26,44 +46,23 @@
 		"test": "vitest run",
 		"test:run": "vitest run",
 		"test:watch": "vitest --watch",
-		"lint": "biome lint .",
-		"lint:full": "biome lint . --fix && tsc --noEmit && actionlint -verbose",
-		"format": "biome format --write .",
-		"format:full": "npm pkg fix && biome format --write . && dprint fmt && textlint --fix \"**/*.md\"",
+		"format": "oxfmt",
+		"lint": "oxlint",
+		"check": "oxfmt && oxlint --fix",
+		"lint-tsc": "tsc --noEmit",
 		"main": "npx project1",
 		"ex1": "node ./example/ex1.mjs && node ./example/ex1.cjs && tsx ./example/ex1.ts",
 		"smoketest": "npm run ex1 && node dist/main.js",
-		"security": "trivy fs --skip-dirs node_modules,cdk.out . && trivy config --skip-dirs node_modules,cdk.out .",
-		"audit": "npm audit && trivy fs --scanners vuln package.json"
-	},
-	"keywords": [
-		"hello-world",
-		"example",
-		"demo",
-		"typescript",
-		"esm",
-		"commonjs",
-		"cli",
-		"tsup",
-		"learning",
-		"sigstore",
-		"trusted-publishing",
-		"github-actions"
-	],
-	"author": "heiwa4126 <heiwa4126@gmail.com>",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/heiwa4126/project1.git"
-	},
-	"license": "MIT",
-	"engines": {
-		"node": ">=18"
+		"security": "trivy fs --skip-dirs node_modules,cdk.out . && trivy config --skip-dirs node_modules,cdk.out ."
 	},
 	"devDependencies": {
 		"@types/node": "^26.6.6",
 		"tsup": "^9.0.0",
 		"tsx": "^4.23.15",
 		"typescript": "^7.0.2",
-		"vitest": "^5.0.5"
+		"vitest": "^5.1.0"
+	},
+	"engines": {
+		"node": ">=18"
 	}
 }

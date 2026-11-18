@@ -13,19 +13,19 @@ export default defineConfig({
 	clean: true,
 	outExtension({ format }) {
 		return {
-			js: format === "cjs" ? ".cjs" : ".js",
+			js: format === "cjs" ? ".cjs" : ".js"
 		};
 	},
 	dts: {
 		resolve: true,
-		entry: ["src/index.ts"],
+		entry: ["src/index.ts"]
 	},
 	// CLIバイナリのshebang追加
 	banner: {
-		js: "#!/usr/bin/env node",
+		js: "#!/usr/bin/env node"
 	},
 	// 本番ビルド用の設定も追加可能
 	env: {
-		NODE_ENV: process.env.NODE_ENV || "development",
-	},
+		NODE_ENV: process.env.NODE_ENV || "development"
+	}
 });

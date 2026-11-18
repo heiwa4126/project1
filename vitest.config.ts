@@ -5,11 +5,11 @@ export default defineConfig({
 		globals: true,
 		environment: "node",
 		include: ["test/**/*.test.ts", "test/**/*.spec.ts"],
-		exclude: ["node_modules", "dist"],
+		exclude: ["node_modules", "dist"]
 	},
 	resolve: {
 		alias: {
-			"@": "/src",
-		},
-	},
+			"@": "/src"
+		}
+	}
 });
